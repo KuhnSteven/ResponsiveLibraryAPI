@@ -1,0 +1,134 @@
+/* Style Guide*/
+html header {
+  font-family: "Baskerville Old Face", Candara, Calibri;
+  letter-spacing: -1px;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  text-align: center; }
+
+/*  PARTIAL #2
+    Contains: header refinement, image styling */
+img {
+  border-style: double; }
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0px; }
+
+h2 {
+  font-size: 1.6rem;
+  margin: 0px;
+  padding: 0px; }
+
+/* global variables */
+/* PARTIAL #1 
+    Contains styling for: form, results*/
+#form {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 750px;
+  padding: 5px;
+  text-align: center;
+  background-color: #e3e3e3;
+  font-size: 1.6rem; }
+  #form p {
+    margin: 3px; }
+
+#results {
+  display: block;
+  margin: 10px;
+  text-align: left;
+  float: left;
+  background-color: white;
+  font-size: 1.2rem; }
+  #results h1 {
+    font-size: 1.6rem;
+    margin: 5px; }
+  #results h2 {
+    font-size: 1.2rem;
+    margin: 2px;
+    margin-left: 5px; }
+
+article {
+  border: 2px dashed black;
+  background-color: #e3e3e3;
+  margin: 3px; }
+  article p {
+    margin: 0px;
+    margin-left: 5px; }
+
+html {
+  background-color: #d3c9b3;
+  font-family: "Kannada Sangam MN", "Andale Mono", Arial, Calibri; }
+  html header {
+    background: linear-gradient(#626262, #d3c9b3);
+    height: 200px;
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto; }
+    html header h1 {
+      margin: 5px; }
+
+nav {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px; }
+  nav ul {
+    list-style-type: none;
+    margin: 10px;
+    margin-left: 0px;
+    display: inline-block; }
+    nav ul li {
+      float: left;
+      padding: 5px;
+      height: 20px;
+      width: 40px; }
+
+nav ul li a {
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  background-color: white; }
+
+nav ul li a:hover {
+  border: 3px solid black;
+  color: blue; }
+
+#search {
+  height: 35px;
+  width: 400px;
+  text-align: center;
+  margin: 5px;
+  margin-left: 23%;
+  border: 3px black solid; }
+
+#searchBtn {
+  border: none;
+  background-color: white;
+  font-size: 1.2rem;
+  padding: 4px;
+  margin-left: 37%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  height: 25%;
+  width: 25%;
+  cursor: pointer; }
+
+.active {
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  color: blue; }

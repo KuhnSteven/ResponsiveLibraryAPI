@@ -1,0 +1,89 @@
+/* Style Guide*/
+@import 'partials/_extend';
+@import 'partials/_partialStyles';
+@import 'partials/_variables';
+@import 'partials/_interactiveDesign';
+
+html {
+	background-color: $primary-color;
+	font-family: $font-stack;
+	header {
+        @extend %Title-Font;
+        //background-color: $tertiary-color;
+        background: linear-gradient($tertiary-color, $primary-color);
+        height: 200px;
+        width: 100%;
+	    text-align: center;
+	    margin-left: auto;
+        margin-right: auto;
+        h1 {
+            margin: 5px;
+        }
+    }
+}
+
+nav {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+	ul {
+		list-style-type: none;
+        margin: 10px;
+        margin-left: 0px;
+    	display: inline-block;
+		li {
+			float: left;
+			padding: 5px;
+			height: 20px;
+			width: 40px;
+		}
+	}
+}
+
+nav ul li a {
+	display: block;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: $standard-font;
+	color: black;
+	padding: 10px 20px;
+	text-decoration: none;
+	background-color: $secondary-color;
+}
+
+nav ul li a:hover {
+	border: 3px solid black;
+	color: $active-color;
+	}
+
+
+#search {
+    height: 35px;
+    width: 400px;
+    text-align: center;
+    margin: 5px;
+    margin-left: 23%;
+    border: 3px black solid;
+}
+
+#searchBtn {
+    border: none;
+    background-color: white;
+    font-size: $standard-font;
+    padding: 4px;
+    margin-left: 37%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    height: 25%;
+    width: 25%;
+    cursor: pointer;
+}
+
+    // Classes
+.active {
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	color: $active-color;
+}
