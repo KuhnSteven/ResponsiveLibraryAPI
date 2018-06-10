@@ -1,7 +1,7 @@
 /*  PARTIAL #2
     Contains: header refinement, image styling */
 img {
-	border-style: double;
+	border-style: none;
 }
 
 h1 {

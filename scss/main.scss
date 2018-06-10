@@ -22,42 +22,6 @@ html {
     }
 }
 
-nav {
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	width: 500px;
-	ul {
-		list-style-type: none;
-        margin: 10px;
-        margin-left: 0px;
-    	display: inline-block;
-		li {
-			float: left;
-			padding: 5px;
-			height: 20px;
-			width: 40px;
-		}
-	}
-}
-
-nav ul li a {
-	display: block;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: $standard-font;
-	color: black;
-	padding: 10px 20px;
-	text-decoration: none;
-	background-color: $secondary-color;
-}
-
-nav ul li a:hover {
-	border: 3px solid black;
-	color: $active-color;
-	}
-
-
 #search {
     height: 35px;
     width: 400px;
@@ -78,12 +42,4 @@ nav ul li a:hover {
     height: 25%;
     width: 25%;
     cursor: pointer;
-}
-
-    // Classes
-.active {
-	border-style: solid;
-	border-color: black;
-	border-width: 1px;
-	color: $active-color;
 }

@@ -1,5 +1,8 @@
-/* PARTIAL #1 
-    Contains styling for: form, results*/
+/* PARTIAL #1 - Interactives
+    Contains styling for: form, results, nav & nav toggle
+*/
+
+// Search form styling
 #form {
     display: flex;
     justify-content: space-around;
@@ -16,8 +19,11 @@
     }
 }
 
+// Result section (Section, contains articles)
 #results {
-	display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 	margin: 10px;
 	text-align: left;
 	float: left;
@@ -34,7 +40,8 @@
 		}
 	}
 
-    // Each result is contained within an article, with a section as the parent
+    // Each result is contained within an article, with the id 'results'
+    // section as the containing parent
 	article {
         border: 2px dashed black;
         background-color: $form-color;
@@ -43,4 +50,84 @@
             margin: 0px;
             margin-left: 5px;
         }
+    }
+    
+// Navigation styling
+nav {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+	ul {
+		list-style-type: none;
+        margin: 10px;
+        margin-left: 0px;
+    	display: inline-block;
+		li {
+			float: left;
+			padding: 5px;
+			height: 20px;
+			width: 40px;
+		}
 	}
+}
+
+nav ul li a {
+	display: block;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: $standard-font;
+	color: black;
+	padding: 10px 20px;
+	text-decoration: none;
+	background-color: $secondary-color;
+}
+
+// Navigation interaction styling (hover/active/hamburger)
+nav ul li a:hover {
+	border: 3px solid black;
+	color: $active-color;
+}
+
+.active {
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	color: $active-color;
+}
+
+// Move navigation toggle to the end of the screen
+#mobileNavToggle {
+    display: flex;
+    justify-content: flex-end;
+}
+
+// Mobile Media 1st
+@media only screen and (max-width: 800px) {
+
+    // Display nav toggle
+    #mobileNavToggle a.openMobileNav {
+        display: inline-block;
+    }
+    #navigation:target {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Hide the open button, show the close button */
+    #navigation:target #mobileNavToggle a.openMobileNav {
+        display: none;
+    }
+    #navigation:target #mobileNavToggle a.closeMobileNav {
+        display: inline-block;
+    }
+
+    #results {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 1px;
+    }
+
+    /* End of mobile media rules */
+}

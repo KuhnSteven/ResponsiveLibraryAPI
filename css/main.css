@@ -13,7 +13,7 @@ html header {
 /*  PARTIAL #2
     Contains: header refinement, image styling */
 img {
-  border-style: double; }
+  border-style: none; }
 
 h1 {
   font-size: 2.5rem;
@@ -25,8 +25,9 @@ h2 {
   padding: 0px; }
 
 /* global variables */
-/* PARTIAL #1 
-    Contains styling for: form, results*/
+/* PARTIAL #1 - Interactives
+    Contains styling for: form, results, nav & nav toggle
+*/
 #form {
   display: flex;
   justify-content: space-around;
@@ -42,7 +43,9 @@ h2 {
     margin: 3px; }
 
 #results {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   margin: 10px;
   text-align: left;
   float: left;
@@ -63,19 +66,6 @@ article {
   article p {
     margin: 0px;
     margin-left: 5px; }
-
-html {
-  background-color: #d3c9b3;
-  font-family: "Kannada Sangam MN", "Andale Mono", Arial, Calibri; }
-  html header {
-    background: linear-gradient(#626262, #d3c9b3);
-    height: 200px;
-    width: 100%;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto; }
-    html header h1 {
-      margin: 5px; }
 
 nav {
   text-align: center;
@@ -107,6 +97,47 @@ nav ul li a:hover {
   border: 3px solid black;
   color: blue; }
 
+.active {
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  color: blue; }
+
+#mobileNavToggle {
+  display: flex;
+  justify-content: flex-end; }
+
+@media only screen and (max-width: 800px) {
+  #mobileNavToggle a.openMobileNav {
+    display: inline-block; }
+  #navigation:target {
+    display: flex;
+    flex-direction: column; }
+  /* Hide the open button, show the close button */
+  #navigation:target #mobileNavToggle a.openMobileNav {
+    display: none; }
+  #navigation:target #mobileNavToggle a.closeMobileNav {
+    display: inline-block; }
+  #results {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 1px; }
+  /* End of mobile media rules */ }
+
+html {
+  background-color: #d3c9b3;
+  font-family: "Kannada Sangam MN", "Andale Mono", Arial, Calibri; }
+  html header {
+    background: linear-gradient(#626262, #d3c9b3);
+    height: 200px;
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto; }
+    html header h1 {
+      margin: 5px; }
+
 #search {
   height: 35px;
   width: 400px;
@@ -126,9 +157,3 @@ nav ul li a:hover {
   height: 25%;
   width: 25%;
   cursor: pointer; }
-
-.active {
-  border-style: solid;
-  border-color: black;
-  border-width: 1px;
-  color: blue; }
