@@ -115,7 +115,7 @@ nav ul li a:hover {
     // Navigation styling
     nav {
         text-align: center;
-        margin-left: none;
+        margin-left: 0px;
         margin-right: 5px;
         width: 100px;
         float: right;
