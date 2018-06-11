@@ -66,6 +66,9 @@ h2 {
   margin-bottom: 8px;
   cursor: pointer; }
 
+#resultsHeader {
+  position: absolute; }
+
 #results {
   display: flex;
   flex-wrap: wrap;
@@ -76,8 +79,7 @@ h2 {
   background-color: white;
   font-size: 1.2rem; }
   #results h1 {
-    font-size: 1.6rem;
-    margin: 5px; }
+    font-size: 1.6rem; }
   #results h2 {
     font-size: 1.2rem;
     margin: 2px;
@@ -87,7 +89,8 @@ article {
   border: 2px dashed black;
   background-color: #e3e3e3;
   margin: 3px;
-  max-width: 500px; }
+  margin-top: 20px;
+  max-width: 300px; }
   article p {
     display: flex;
     flex-wrap: wrap;
@@ -155,6 +158,9 @@ nav ul li a:hover {
     flex-wrap: wrap;
     margin: 5px;
     margin-top: 10px; }
+  #resultsHeader {
+    position: relative;
+    margin-left: 45%; }
   article {
     max-width: 100%; }
   /* End of mobile media rules */ }

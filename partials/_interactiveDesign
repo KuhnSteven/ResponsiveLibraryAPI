@@ -46,6 +46,10 @@
 
 
 // Result section (Section, contains articles)
+#resultsHeader {
+    position: absolute;
+}
+
 #results {
     display: flex;
     flex-wrap: wrap;
@@ -56,8 +60,7 @@
 	background-color: $secondary-color;
 	font-size: $standard-font;
 		h1 {
-			font-size: $large-font;
-			margin: 5px;
+            font-size: $large-font;
 		}
 		h2 {
 			font-size: $standard-font;
@@ -70,7 +73,8 @@
         border: 2px dashed black;
         background-color: $form-color;
         margin: 3px;
-        max-width: 500px;
+        margin-top: 20px;
+        max-width: 300px;
         p {
             display: flex;
             flex-wrap: wrap;
@@ -160,7 +164,10 @@ nav ul li a:hover {
         margin: 5px;
         margin-top: 10px;
     }
-
+    #resultsHeader {
+        position: relative;
+        margin-left: 45%;
+    }
     article {
         max-width: 100%;
     }

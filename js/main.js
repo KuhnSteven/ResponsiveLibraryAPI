@@ -41,7 +41,7 @@ function addLocalStorage() {
 
 // Build results
 function displayPage(data) {
-    content = `<h1>Results</h1>`
+    content = `<h1 id="resultsHeader">Results</h1>`
     data.docs.forEach(book => {
         content +=
             `<article> 
