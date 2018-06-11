@@ -26,7 +26,7 @@ h2 {
 
 /* global variables */
 /* PARTIAL #1 - Interactives
-    Contains styling for: form, results, nav & nav toggle
+    Contains styling for: form, form parts, results, nav & nav toggle
 */
 #form {
   display: flex;
@@ -34,13 +34,36 @@ h2 {
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-  width: 750px;
+  width: 75%;
+  height: auto;
   padding: 5px;
   text-align: center;
   background-color: #e3e3e3;
   font-size: 1.6rem; }
   #form p {
     margin: 3px; }
+
+#search {
+  height: 35px;
+  width: 75%;
+  text-align: center;
+  margin: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px black solid; }
+
+#searchBtn {
+  border: none;
+  background-color: white;
+  font-size: 1.2rem;
+  padding: 4px;
+  height: 25%;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  cursor: pointer; }
 
 #results {
   display: flex;
@@ -62,36 +85,13 @@ h2 {
 article {
   border: 2px dashed black;
   background-color: #e3e3e3;
-  margin: 3px; }
+  margin: 3px;
+  max-width: 500px; }
   article p {
+    display: flex;
+    flex-wrap: wrap;
     margin: 0px;
     margin-left: 5px; }
-
-nav {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: 500px; }
-  nav ul {
-    list-style-type: none;
-    margin: 10px;
-    margin-left: 0px;
-    display: inline-block; }
-    nav ul li {
-      float: left;
-      padding: 5px;
-      height: 20px;
-      width: 40px; }
-
-nav ul li a {
-  display: block;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: black;
-  padding: 10px 20px;
-  text-decoration: none;
-  background-color: white; }
 
 nav ul li a:hover {
   border: 3px solid black;
@@ -104,26 +104,82 @@ nav ul li a:hover {
   color: blue; }
 
 #mobileNavToggle {
+  display: none; }
+
+#navToggle {
   display: flex;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  margin-right: 25px; }
 
 @media only screen and (max-width: 800px) {
-  #mobileNavToggle a.openMobileNav {
-    display: inline-block; }
-  #navigation:target {
-    display: flex;
-    flex-direction: column; }
-  /* Hide the open button, show the close button */
-  #navigation:target #mobileNavToggle a.openMobileNav {
+  #mobileNavToggle {
+    display: block; }
+  nav {
+    text-align: center;
+    margin-left: none;
+    margin-right: 5px;
+    width: 100px;
+    float: right; }
+  ul {
+    list-style-type: none;
+    margin: 1px;
+    padding: 0px;
     display: none; }
-  #navigation:target #mobileNavToggle a.closeMobileNav {
-    display: inline-block; }
+    ul li {
+      padding: 5px;
+      margin-top: 5px;
+      height: 25px;
+      width: 75px;
+      float: right; }
+  nav ul li a {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+    background-color: white; }
+  .openMobileNav {
+    position: relative;
+    float: right;
+    display: block; }
   #results {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin: 1px; }
+    margin: 5px;
+    margin-top: 10px; }
+  article {
+    max-width: 100%; }
   /* End of mobile media rules */ }
+
+@media only screen and (min-width: 801px) {
+  nav {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px; }
+    nav ul {
+      list-style-type: none;
+      margin: 10px;
+      margin-left: 0px;
+      display: inline-block; }
+      nav ul li {
+        float: left;
+        padding: 5px;
+        height: 25px;
+        width: auto; }
+  nav ul li a {
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: white; } }
 
 html {
   background-color: #d3c9b3;
@@ -133,27 +189,7 @@ html {
     height: 200px;
     width: 100%;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto; }
+    margin-left: 5px;
+    margin-right: 5px; }
     html header h1 {
       margin: 5px; }
-
-#search {
-  height: 35px;
-  width: 400px;
-  text-align: center;
-  margin: 5px;
-  margin-left: 23%;
-  border: 3px black solid; }
-
-#searchBtn {
-  border: none;
-  background-color: white;
-  font-size: 1.2rem;
-  padding: 4px;
-  margin-left: 37%;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  height: 25%;
-  width: 25%;
-  cursor: pointer; }

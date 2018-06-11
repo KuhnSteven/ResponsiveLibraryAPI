@@ -30,8 +30,13 @@ form.addEventListener("submit", e => {
             //	  .then(data => console.log(data))
             .then(data => displayPage(data))
             .catch(error => console.log('Error Report:', error));
+        addLocalStorage();
     }
 })
+
+function addLocalStorage() {
+    localStorage.setItem("book", input);
+}
 
 
 // Build results
@@ -53,5 +58,15 @@ function displayPage(data) {
 
     // Populate the DOM
     results.innerHTML = content;
-
 }
+
+// Navigation Toggle
+// Variables
+const button = document.querySelector('#mobileNavToggle');
+const ul = document.querySelector('ul');
+
+// Function
+button.addEventListener('click', (e)=> {
+    console.log('Mobile nav toggled.');
+    ul.classList.toggle("openMobileNav");
+})
