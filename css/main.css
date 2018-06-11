@@ -59,6 +59,7 @@ h2 {
   padding: 4px;
   height: 25%;
   width: 25%;
+  max-width: 100px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 8px;
@@ -109,17 +110,20 @@ nav ul li a:hover {
 #navToggle {
   display: flex;
   justify-content: flex-end;
-  margin-right: 25px; }
+  margin-right: 10px; }
 
 @media only screen and (max-width: 800px) {
   #mobileNavToggle {
+    margin-top: 10px;
     display: block; }
   nav {
     text-align: center;
     margin-left: none;
     margin-right: 5px;
     width: 100px;
-    float: right; }
+    float: right;
+    position: relative;
+    bottom: 85px; }
   ul {
     list-style-type: none;
     margin: 1px;
@@ -127,7 +131,7 @@ nav ul li a:hover {
     display: none; }
     ul li {
       padding: 5px;
-      margin-top: 5px;
+      margin-top: 2px;
       height: 25px;
       width: 75px;
       float: right; }
@@ -142,7 +146,7 @@ nav ul li a:hover {
     text-decoration: none;
     background-color: white; }
   .openMobileNav {
-    position: relative;
+    position: absolute;
     float: right;
     display: block; }
   #results {
